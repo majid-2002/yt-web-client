@@ -2,6 +2,7 @@
 
 import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import ReactPlayer from "react-player";
 
 function Videocomponent() {
   const videoPrefix =
@@ -14,11 +15,7 @@ function Videocomponent() {
         WatchPage
       </div>
       <div className=" w-full h-auto flex items-center justify-center py-10">
-        <video
-          controls
-          className="w-1/2 h-1/2"
-          src={videoPrefix + videoSrc}
-        ></video>
+        <ReactPlayer url={videoPrefix + videoSrc} controls={true}></ReactPlayer>
       </div>
     </div>
   );

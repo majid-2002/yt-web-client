@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-white h-screen">
+    <main className="bg-white min-h-screen h-full">
       <Navbar />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
           {videos.map((video) => (
